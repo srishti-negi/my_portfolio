@@ -1,0 +1,344 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Code Description &#8212; chess_documentation 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Welcome to Srishti Negi’s homepage!" href="author.html" />
+    <link rel="prev" title="About PGN" href="about_pgn.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="author.html" title="Welcome to Srishti Negi’s homepage!"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="about_pgn.html" title="About PGN"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">chess_documentation 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-my_project.chess29">
+<span id="code-description"></span><h1>Code Description<a class="headerlink" href="#module-my_project.chess29" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="my_project.chess29.ambiguous_move">
+<code class="descclassname">my_project.chess29.</code><code class="descname">ambiguous_move</code><span class="sig-paren">(</span><em>piece</em>, <em>extra</em>, <em>destination</em>, <em>board_view</em>, <em>piece_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#ambiguous_move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.ambiguous_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the piece denoted to be moved if more than one piece are eligible to be moved.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>{str} -- piece to be moved</strong> (<em>piece</em>) – </li>
+<li><strong>{str} -- denotes the current file of the piece to be moved</strong> (<em>extra</em>) – </li>
+<li><strong>{str} -- position to which piece is moved</strong> (<em>destination</em>) – </li>
+<li><strong>{dict} -- A dictionry with the piece position as key corresponding to piece</strong> (<em>board_view</em>) – </li>
+<li><strong>{dict} -- A dictionary with piece as key corresponding to a list of positions of the piece.</strong> (<em>piece_view</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dict, dict – updated piece_view and board_view after the piece is moved</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.castle">
+<code class="descclassname">my_project.chess29.</code><code class="descname">castle</code><span class="sig-paren">(</span><em>color_</em>, <em>move</em>, <em>board_view</em>, <em>piece_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#castle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.castle" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to make the castling move</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>{str} -- denotes the color of the piece</strong> (<em>color</em>) – </li>
+<li><strong>{str} -- denotes the move to be made</strong> (<em>move</em>) – </li>
+<li><strong>{dict} -- A dictionry with the piece position as key corresponding to piece</strong> (<em>board_view</em>) – </li>
+<li><strong>{dict} -- A dictionary with piece as key corresponding to a list of positions of the piece.</strong> (<em>piece_view</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dict, dict – updated piece_view and board_view after the piece is moved</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.change_position">
+<code class="descclassname">my_project.chess29.</code><code class="descname">change_position</code><span class="sig-paren">(</span><em>piece</em>, <em>position_from</em>, <em>position_to</em>, <em>board_view</em>, <em>piece_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#change_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.change_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to shift a piece from one position to another by altering board_view and piece_view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>{str} -- denotes the piece to be moved</strong> (<em>piece</em>) – </li>
+<li><strong>{str} -- denotes the current position of the piece</strong> (<em>position_from</em>) – </li>
+<li><strong>{str} -- denotes the position the piece is to be moved to</strong> (<em>position_to</em>) – </li>
+<li><strong>{dict} -- A dictionry with the piece position as key corresponding to piece</strong> (<em>board_view</em>) – </li>
+<li><strong>{dict} -- A dictionary with piece as key corresponding to a list of positions of the piece.</strong> (<em>piece_view</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dict, dict – the board_view and piece_view are returned after being updated.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.display_board">
+<code class="descclassname">my_project.chess29.</code><code class="descname">display_board</code><span class="sig-paren">(</span><em>board_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#display_board"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.display_board" title="Permalink to this definition">¶</a></dt>
+<dd><p>The display_board function takes a dictionary of positions and pieces corresponding to them as argument and displays them in an easy to understand format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{dict} -- dictionary of positions and pieces corresponding to those positions</strong> (<em>board_view</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.is_capture">
+<code class="descclassname">my_project.chess29.</code><code class="descname">is_capture</code><span class="sig-paren">(</span><em>move</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#is_capture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.is_capture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a piece is being captured during the move</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{str} -- Denotes the move made</strong> (<em>move</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">boolean value – returns True if piece is captured else false</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.is_promotion">
+<code class="descclassname">my_project.chess29.</code><code class="descname">is_promotion</code><span class="sig-paren">(</span><em>move</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#is_promotion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.is_promotion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for pawn promotion</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{str} -- denotes the move made</strong> (<em>move</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">boolean value – returns True is pawn is promoted else returns False.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.kqrnbp_move">
+<code class="descclassname">my_project.chess29.</code><code class="descname">kqrnbp_move</code><span class="sig-paren">(</span><em>move</em>, <em>color_</em>, <em>board_view</em>, <em>piece_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#kqrnbp_move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.kqrnbp_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to move a piece if it is a normal move, i.e. no castling, ambiguity etc
+:param move {str} – denotes the move to be made:
+:param <a href="#id1"><span class="problematic" id="id2">color_</span></a> {str} – denotes the color of the piece to be moved:
+:param board_view {dict} – A dictionry with the piece position as key corresponding to piece:
+:param piece_view {dict} – A dictionary with piece as key corresponding to a list of positions of the piece.:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict, dict – updated piece_view and board_view after the piece is moved</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.make_move">
+<code class="descclassname">my_project.chess29.</code><code class="descname">make_move</code><span class="sig-paren">(</span><em>color_</em>, <em>move</em>, <em>board_view</em>, <em>piece_view</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#make_move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.make_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function evaluates the move and decides which move to make , for eg. castling, normal move, etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>{str} -- denotes the color of the piece</strong> (<em>color</em>) – </li>
+<li><strong>{str} -- denotes the move to be made</strong> (<em>move</em>) – </li>
+<li><strong>{dict} -- A dictionry with the piece position as key corresponding to piece</strong> (<em>board_view</em>) – </li>
+<li><strong>{dict} -- A dictionary with piece as key corresponding to a list of positions of the piece.</strong> (<em>piece_view</em>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dict, dict – updated piece_view and board_view after the piece is moved</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.pgn_to_moves">
+<code class="descclassname">my_project.chess29.</code><code class="descname">pgn_to_moves</code><span class="sig-paren">(</span><em>game_file: str</em><span class="sig-paren">)</span> &#x2192; [&lt;class 'str'&gt;]<a class="reference internal" href="_modules/my_project/chess29.html#pgn_to_moves"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.pgn_to_moves" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function reads a pgn file in order to get the moves made in the game. It first removes uneccesary details and then seperates the moves.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{str} -- game_file is a .txt file from wwhich the data is extracted in form of strings</strong> (<em>game_file</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[str] – a list of moves is returned</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.pre_process_a_move">
+<code class="descclassname">my_project.chess29.</code><code class="descname">pre_process_a_move</code><span class="sig-paren">(</span><em>move: str) -&gt; (&lt;class 'str'&gt;</em>, <em>&lt;class 'str'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#pre_process_a_move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.pre_process_a_move" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function processes all the moves in order to seperate the moves made by the white and the black pieces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{str} -- denotes the move made eg.&quot;Rd4&quot;</strong> (<em>move</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(str, str) – a tuple of move made by white piece and move made by black piece.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.pre_process_moves">
+<code class="descclassname">my_project.chess29.</code><code class="descname">pre_process_moves</code><span class="sig-paren">(</span><em>moves: [&lt;class 'str'&gt;]</em><span class="sig-paren">)</span> &#x2192; [(&lt;class 'str'&gt;, &lt;class 'str'&gt;)]<a class="reference internal" href="_modules/my_project/chess29.html#pre_process_moves"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.pre_process_moves" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function pre processes all the moves .</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[(str, str)] – A list of tuples contaning moves made by white and black pieces.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.set_positions_in_board">
+<code class="descclassname">my_project.chess29.</code><code class="descname">set_positions_in_board</code><span class="sig-paren">(</span><em>game_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#set_positions_in_board"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.set_positions_in_board" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function takes the pgn file of the game and processes it in order to get the moves made and implement them on the chess board.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>{.txt file} -- A PGN file that contains the details of the chess game</strong> (<em>game_file</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dict – A ditionary with the position as key corresponding to the piece in that position.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="my_project.chess29.setup">
+<code class="descclassname">my_project.chess29.</code><code class="descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_project/chess29.html#setup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#my_project.chess29.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function was used to create 2 dictionaries boardview and pieceview which are used to denote the position of the pieces and the piece in a particular position</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[dict, dict] – [The 2 dictionaries board_view and piece_view denote the initial board setup ]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="about_pgn.html"
+                        title="previous chapter">About PGN</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="author.html"
+                        title="next chapter">Welcome to Srishti Negi’s homepage!</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/code_description.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="author.html" title="Welcome to Srishti Negi’s homepage!"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="about_pgn.html" title="About PGN"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">chess_documentation 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Srishti Negi.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>

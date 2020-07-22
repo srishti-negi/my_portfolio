@@ -1,0 +1,158 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>About pgn2chess &#8212; chess_documentation 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pre-requisite knowledge" href="prerequisite_knowledge.html" />
+    <link rel="prev" title="Welcome to Pgn2Chess’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="prerequisite_knowledge.html" title="Pre-requisite knowledge"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Pgn2Chess’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">chess_documentation 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="about-pgn2chess">
+<h1><strong>About pgn2chess</strong><a class="headerlink" href="#about-pgn2chess" title="Permalink to this headline">¶</a></h1>
+<p>Pgn2Chess is a program, written in Python. It allows you to read chess moves from a pgn file and display the final position of the chess pieces in the chess-board. It accounts for pawn promotion, piece capture and castling.</p>
+<p><strong>Input:</strong></p>
+<p>The input is a PGN file of the following format.</p>
+<img alt="_images/input.png" class="align-center" src="_images/input.png" />
+<p><strong>Output:</strong></p>
+<p>The output of the program is of the following format.</p>
+<img alt="_images/output.png" class="align-center" src="_images/output.png" />
+<p><strong>CODE OVERVIEW</strong></p>
+<p>The main components of the code are as foloows:</p>
+<ol class="arabic">
+<li><p class="first"><strong>setup()</strong></p>
+<blockquote>
+<div><p>This function is used to setup the initial chess board representation in the form of 2 dictionaries board_view and piece_view.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>board_view and piece_view:</strong></p>
+<p>The whole code relies on 2 dictionaries board_view and piece_view in order to-</p>
+</li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Access the piece at a given position in chessboard.</li>
+<li>Access the positions of a given piece in the chessboard.</li>
+<li>Move the piece from one position to another by updating board_view and piece_view</li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The initial values of these dictionaries reflect the initial board setup</p>
+</div>
+<img alt="_images/dict.png" class="align-center" src="_images/dict.png" />
+<ol class="arabic" start="3">
+<li><p class="first"><strong>preprocess_moves():</strong></p>
+<blockquote>
+<div><p>The function preprocess_moves extracts data from a pgn file in order to access the moves made in the game in the form of a list of tuples wherein the     first element is the move made by the mhite piece and the second element is the move made by the black piece.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>make_move():</strong></p>
+<blockquote>
+<div><p>The function make_move evaluates the moves made by the piece, i.e. checks for castling, ambiguity, check-mate etc and then makes the appropriate move.</p>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>change_position()</strong></p>
+<blockquote>
+<div><p>This function updates the board_view and the piece_view dictionaries after each move.</p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter"><strong>Welcome to Pgn2Chess’s documentation!</strong></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="prerequisite_knowledge.html"
+                        title="next chapter">Pre-requisite knowledge</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/about_pgn2chess.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="prerequisite_knowledge.html" title="Pre-requisite knowledge"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Pgn2Chess’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">chess_documentation 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020, Srishti Negi.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.4.
+    </div>
+  </body>
+</html>
